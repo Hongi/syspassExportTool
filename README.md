@@ -53,12 +53,12 @@ I suggest to do this **FIX**:
 
 1. enter in **syspassExportTool** folder
 2. Install Composer:
-    1. apt update && apt-get install curl php-cli php-mbstring git unzip
-    2. curl -sS https://getcomposer.org/installer -o composer-setup.php
-    3. php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-    4. composer require
+    1. ``apt update && apt-get install curl php-cli php-mbstring git unzip``
+    2. ``curl -sS https://getcomposer.org/installer -o composer-setup.php``
+    3. ``php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"``
+    4. ``composer require``
 3. Install php mysql packages:
-    1. apt-get install php7.0-mysql
+    1. ``apt-get install php7.0-mysql``
 4. Configure the mysql parameters in the **export.php** file:
 ```
 $hostname   ="127.0.0.1";
@@ -73,7 +73,7 @@ $password   ="syspass";
 To use the tool:
 1. enter in the **syspassExportTool** folder
 2. run the command: ``php export.php <MASTERKEY-PASSWORD>``
-3. wait for the message: FILE CREATED!
+3. wait for the message: ``FILE CREATED!``
 
 ## Columns in file
 
