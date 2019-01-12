@@ -25,13 +25,13 @@ To use this tool you need:
 1. clone the project: ``git clone https://github.com/fabiottini/syspassExportTool.git``
 2. run the docker-compose in the docker folder: ``docker-compose up -d``
 3. when all of 3 container are up and running go to web interface to do the installation: ``http://127.0.0.1:3000``
-4. At the end of syspass installation, apply this **FIX** to allows syspass to run without database connection problem:
+4. At the end of syspass installation, apply this **FIX** to allows syspass to run without database connection problem. sometimes when you restart the container the ip could change and the syspass application CAN NOT access to the db.
+I suggest to do this **FIX**:
     1. open the page: ``http://127.0.0.1:3003`` (phpmyadmin interface)
-    2. enter with (or those you choose in the docker-compose file): 
+    2. enter with (or those you fillin in the docker-compose file): 
         - **username**: root
         - **password**: syspass 
-    3. enter in the **Accounts Users** tab and change the host permission of the user ``sp_<some code>`` to ``%``
-    4. sometimes when you restart the container the ip could change and the syspass application CAN NOT access to the db
+    3. enter in the **Accounts Users** section and change the host permission of the user ``sp_<some code>`` to ``%``
 5. run ``docker-compose down`` to switch off all the container
 6. comment in the file ``docker-compose.yml`` the phpmyadmin section (for more security):
 ```
