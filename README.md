@@ -65,3 +65,23 @@ To use the tool:
 1. enter in the **syspassExportTool** folder
 2. run the command: ``php export.php <MASTERKEY-PASSWORD>``
 3. wait for the message: FILE CREATED!
+
+## Columns in file
+
+The CSV or JSON columns foreach account are:
+- id
+- User Group
+- User Name
+- Client Name
+- Account Name
+- login
+- url
+- pass
+- key
+- notes
+- dateAdd
+- isPrivate
+- isPrivateGroup
+- passDate
+- **passDecrypt** <== this value represent the **DECRYPTED PASSWORD**
+- tags
