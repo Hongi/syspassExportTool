@@ -1,0 +1,39 @@
+version: '2'
+services:
+  app:
+    container_name: password
+    image: nuxsmin/docker-syspass:latest 
+    restart: always
+    ports:
+      - 3000:80
+      - 3001:443
+    links:
+      - db
+    depends_on:
+      - db
+    volumes:
+      - ./syspass-config:/var/www/html/sysPass/app/config
+      - ./syspass-backup:/var/www/html/sysPass/app/backup
+
+  db:
+    container_name: passwordDB
+    restart: always
+    image: mariadb:10.2
+    environment:
+      - MYSQL_ROOT_PASSWORD=syspass
+    ports:
+      - 127.0.0.1:3002:3306
+    volumes:
+      - ./db:/var/lib/mysql
+
+  phpmyadmin: 
+    image: phpmyadmin/phpmyadmin
+    container_name: passwordDBPHP
+    depends_on:
+      - db
+    links: 
+      - db
+    ports:
+      - 3003:80
+    environment:
+      - MYSQL_ROOT_PASSWORD: syspass
