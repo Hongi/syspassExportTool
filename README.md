@@ -1,5 +1,14 @@
 # SYSPASS EXPORT TOOL
 
+# Table of Contents
+1. [Introduction](#introduction)
+2. [Requirements](#Requirements)
+3. [Install syspass on docker](#Install-syspass-on-docker)
+4. [Install syspass export tool](#Install-syspass-export-tool)
+5. [How to use the tool](#How-to-use-the-tool)
+6. [Columns in file](#Columns-in-file)
+
+
 ## Introduction
 
 The tool allows to export the syspass database passwords and some linked infos into a CSV or JSON file.
