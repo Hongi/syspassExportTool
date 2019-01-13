@@ -56,7 +56,12 @@ The CSV or JSON columns foreach exported account are:
 
 1. clone the project: ``git clone https://github.com/fabiottini/syspassExportTool.git``
 2. run the docker-compose in the **docker** folder: ``docker-compose up -d``
-3. when all of 3 containers are up and running go to web interface to continue the installation: ``http://127.0.0.1:3000``
+3. when all of 3 containers are up and running go to web interface to continue the installation ``http://127.0.0.1:3000``:
+    - **CONFIGURE BBDD** section:
+        - **User**: root
+        - **Password**: (the same as docker-compose file)
+        - **database name**: syspass
+        - **Server BBDD for syspass**: db
 4. At the end of syspass installation, i suggesto to apply this **FIX** to allows syspass to run without database connection problem.
     - **THE PROBLEM**: <br> Sometimes when you restart the container the syspass container ip change and the syspass application CAN NOT access to the db that have internally a fixed ip for the syspass user.
     - **The steps** to apply the **FIX** are:

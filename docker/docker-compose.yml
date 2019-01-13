@@ -36,4 +36,4 @@ services:
     ports:
       - 3003:80
     environment:
-      - MYSQL_ROOT_PASSWORD: syspass
+      - MYSQL_ROOT_PASSWORD=syspass
