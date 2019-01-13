@@ -12,7 +12,7 @@
 
 ## Introduction
 
-The tool allows to export the syspass: [https://www.syspass.org/](https://www.syspass.org) database passwords and some linked infos into a CSV or JSON file.
+The tool allows to export the syspass([https://www.syspass.org/](https://www.syspass.org)) database passwords and some linked infos into a CSV or JSON file.
 
 ## Requirements
 
