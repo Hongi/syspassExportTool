@@ -75,10 +75,10 @@ function setAsCSVText($arg){
 
 function db_connect($hostname,$port,$dbname,$user,$password){
     try {
-        $db = new PDO ("mysql:host=$hostname;port=$port;dbname=$dbname", $user, $pass);
+        $db = new PDO ("mysql:host=$hostname;port=$port;dbname=$dbname", $user, $password);
         return $db;   
     } catch (PDOException $e) {
-        printMSG("Errore: " . $e->getMessage());
+        printMSG("Error: " . $e->getMessage());
         return null;
     }    
 }
